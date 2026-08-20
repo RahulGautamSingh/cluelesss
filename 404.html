@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rahul Gautam Singh — under tension</title>
-<meta name="description" content="Portfolio in build. Case studies from Renovate, Unibloom Switch and a clinical platform at IIT Delhi." />
+<title>404 — off the anchor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
     --steel:#6F7E96;
     --mist:#DCE3EC;
     --stress:#E8A33D;
-    --hot:#FFE9BC;
     --line:rgba(111,126,150,.22);
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -35,83 +33,58 @@
   }
 
   .shell{
-    position:relative;z-index:2;
-    height:100%;
+    position:relative;z-index:2;height:100%;
     display:flex;flex-direction:column;
     padding:clamp(20px,4vw,52px);
     max-width:1240px;margin:0 auto;
   }
-
   .eyebrow{
-    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    display:flex;align-items:center;gap:12px;
     font-family:"JetBrains Mono",monospace;
-    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--steel);
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);
   }
-  .eyebrow .pip{width:5px;height:5px;border-radius:50%;background:var(--stress);box-shadow:0 0 10px var(--stress)}
+  .eyebrow .pip{width:5px;height:5px;border-radius:50%;background:var(--steel)}
 
   .headline{margin-top:clamp(28px,7vh,72px)}
   .mask{display:block;overflow:hidden;padding-bottom:.06em}
   .line{
     display:block;
-    font-size:clamp(2.5rem,8.4vw,6.2rem);
-    font-stretch:125%;font-weight:700;
-    line-height:.92;letter-spacing:-.035em;
+    font-size:clamp(2.3rem,7.6vw,5.6rem);
+    font-stretch:125%;font-weight:700;line-height:.92;letter-spacing:-.035em;
   }
   .line--dim{color:var(--steel);font-weight:500}
 
-  .lede{
-    margin-top:clamp(18px,3vh,28px);
-    max-width:44ch;
-    font-size:clamp(.95rem,1.5vw,1.08rem);
-    line-height:1.6;color:#A9B5C7;
-  }
+  .lede{margin-top:clamp(18px,3vh,28px);max-width:42ch;font-size:clamp(.95rem,1.5vw,1.08rem);line-height:1.6;color:#A9B5C7}
 
-  .band{flex:1 1 auto;min-height:120px}
+  .band{flex:1 1 auto;min-height:130px}
 
-  .ledger{border-top:1px solid var(--line)}
-  .row{
-    display:flex;align-items:baseline;gap:16px;
-    padding:11px 0;border-bottom:1px solid var(--line);
-  }
-  .row .what{flex:1 1 auto;font-size:clamp(.86rem,1.4vw,.98rem);color:#C3CDDC}
-  .row .state{
-    font-family:"JetBrains Mono",monospace;
-    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--steel);white-space:nowrap;
-  }
-  .row .state.live{color:var(--stress)}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
 
-  .foot{
-    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
-    padding-top:20px;
+  .cta{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    background:none;color:var(--mist);
+    border:1px solid var(--line);border-radius:2px;
+    padding:13px 20px;cursor:pointer;
+    transition:border-color .25s ease,color .25s ease,background .25s ease;
   }
+  .cta:hover,.cta:focus-visible{border-color:var(--stress);color:var(--stress);background:rgba(232,163,61,.06)}
+  .cta:focus-visible{outline:2px solid var(--stress);outline-offset:4px}
+  .cta[disabled]{opacity:.55;cursor:default}
+  .cta .arrow{display:inline-block;transition:transform .25s ease}
+  .cta:hover .arrow{transform:translateX(4px)}
+
   .links{display:flex;gap:22px;flex-wrap:wrap}
-  .links a{
-    font-family:"JetBrains Mono",monospace;
-    font-size:12px;letter-spacing:.06em;
-    color:var(--steel);text-decoration:none;
-    padding:4px 2px;border-bottom:1px solid transparent;
-    transition:color .25s ease,border-color .25s ease;
-  }
+  .links a{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;padding:4px 2px;transition:color .25s ease,border-color .25s ease}
   .links a:hover,.links a:focus-visible{color:var(--mist);border-bottom-color:var(--stress)}
   .links a:focus-visible{outline:2px solid var(--stress);outline-offset:4px;border-radius:2px}
 
-  .readout{
-    display:flex;align-items:center;gap:10px;
-    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;
-    color:var(--steel);text-transform:uppercase;
-  }
-  .readout .val{color:var(--stress);min-width:5.4ch;text-align:right}
-  .readout .bar{width:74px;height:2px;background:rgba(111,126,150,.25);position:relative;overflow:hidden}
-  .readout .bar i{position:absolute;inset:0 auto 0 0;width:0%;background:var(--stress);display:block}
+  .status{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+  .status b{color:var(--stress);font-weight:500}
 
   @media (max-width:640px){
-    .foot{flex-direction:column;align-items:flex-start;gap:14px}
-    .band{min-height:90px}
-  }
-  @media (prefers-reduced-motion:reduce){
-    .line{transform:none!important}
+    .foot{flex-direction:column;align-items:flex-start;gap:16px}
+    .band{min-height:100px}
   }
 </style>
 </head>
@@ -121,44 +94,31 @@
 
 <div class="shell">
   <header class="eyebrow" id="eyebrow">
-    <span class="pip"></span>
-    <span>Rahul Gautam Singh</span>
-    <span>/</span>
-    <span>Full-stack engineer, Delhi</span>
+    <span class="pip"></span><span>Error 404</span><span>/</span><span>Link failed</span>
   </header>
 
   <h1 class="headline">
-    <span class="mask"><span class="line">Under tension.</span></span>
-    <span class="mask"><span class="line line--dim">Not yet released.</span></span>
+    <span class="mask"><span class="line">This one came</span></span>
+    <span class="mask"><span class="line line--dim">off its anchor.</span></span>
   </h1>
 
   <p class="lede" id="lede">
-    The portfolio is being assembled. Case studies, working notes, and the things
-    that broke on the way. Drag the strand while you wait.
+    The page you asked for isn't at this address. Everything else is still holding.
+    Splice the strand back and I'll take you to the start.
   </p>
 
   <div class="band" id="strand-band" aria-hidden="true"></div>
 
-  <section class="ledger" id="ledger" aria-label="What is landing here">
-    <div class="row"><span class="what">Renovate: shipping a security default to 2M installs</span><span class="state">Editing</span></div>
-    <div class="row"><span class="what">Unibloom Switch: cutting LLM inference cost by 70%</span><span class="state">Drafting</span></div>
-    <div class="row"><span class="what">Clinical platform at IIT Delhi: 3,500 req/s, five hospital networks</span><span class="state">Drafting</span></div>
-    <div class="row"><span class="what">Dependency review agent: reading changelogs so you don't</span><span class="state live">In build</span></div>
-  </section>
-
   <div class="foot" id="foot">
+    <button class="cta" id="reconnect">
+      <span id="ctaLabel">Splice and go home</span><span class="arrow" aria-hidden="true">&rarr;</span>
+    </button>
     <nav class="links">
       <a href="https://github.com/RahulGautamSingh">GitHub</a>
       <a href="https://www.linkedin.com/in/rahul-gautam-singh/">LinkedIn</a>
       <a href="mailto:rahultesnik@gmail.com">Email</a>
-      <a href="https://rjis.substack.com">Writing</a>
     </nav>
-    <div class="readout">
-      <span>Strain</span>
-      <span class="bar"><i id="bar"></i></span>
-      <span class="val" id="strain">00.0%</span>
-      <span>held</span>
-    </div>
+    <p class="status" id="status">Tension <b>lost</b></p>
   </div>
 </div>
 
@@ -171,20 +131,21 @@
   var canvas = document.getElementById("field");
   var ctx = canvas.getContext("2d");
   var band = document.getElementById("strand-band");
-  var strainEl = document.getElementById("strain");
-  var barEl = document.getElementById("bar");
+  var btn = document.getElementById("reconnect");
+  var ctaLabel = document.getElementById("ctaLabel");
+  var statusEl = document.getElementById("status");
 
   var C = { steel:[111,126,150], stress:[232,163,61], hot:[255,233,188] };
   var N = 92, MID = N >> 1;
-  var pts = [], W = 0, H = 0, cy = 0, ax0 = 0, ax1 = 0, restSpacing = 0;
+  var pts = [], W = 0, H = 0, cy = 0, ax0 = 0, ax1 = 0;
 
   var state = {
-    tautness: reduced ? 1 : 0,   // 0 = slack coil, 1 = strung taut
-    gravity: 0.03,
+    tautness: 1,
+    gravity: 0.42,   // the halves hang once the link is gone
+    weld: 0,         // 0 = severed, 1 = spliced
     bloom: 0,
-    strain: 0
+    sway: 1
   };
-
   var pointer = { x:-9999, y:-9999, active:false };
 
   function lay(){
@@ -193,7 +154,6 @@
     canvas.width = W * dpr; canvas.height = H * dpr;
     canvas.style.width = W + "px"; canvas.style.height = H + "px";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
     var r = band.getBoundingClientRect();
     cy = r.top + r.height / 2;
     var pad = Math.min(W * 0.07, 96);
@@ -207,39 +167,40 @@
       var x = ax0 + (ax1 - ax0) * t;
       pts.push({ x:x, y:cy, px:x, py:cy });
     }
+    // kick the free ends downward so the break reads as a recoil
+    if (!reduced){
+      pts[MID].py = pts[MID].y - 5;
+      pts[MID + 1].py = pts[MID + 1].y - 5;
+    }
   }
 
   function spacing(){
-    // slack rope when tautness is 0, slightly over-stretched when 1
     var f = 1.16 + (0.982 - 1.16) * state.tautness;
     return ((ax1 - ax0) / (N - 1)) * f;
   }
 
   function step(t){
-    restSpacing = spacing();
-    var damp = 0.972;
+    var restSpacing = spacing();
+    var damp = 0.975;
+    var wind = reduced ? 0 : Math.sin(t * 0.0007) * 0.04 * state.sway;
 
     for (var i = 1; i < N - 1; i++){
       var p = pts[i];
       var vx = (p.x - p.px) * damp;
       var vy = (p.y - p.py) * damp;
       p.px = p.x; p.py = p.y;
-
-      // ambient quiver so the strand never reads as dead
-      var breathe = reduced ? 0 : Math.sin(t * 0.0011 + i * 0.19) * 0.05;
-
-      p.x += vx;
-      p.y += vy + state.gravity + breathe;
+      p.x += vx + wind;
+      p.y += vy + state.gravity;
     }
 
     if (pointer.active){
-      var R = Math.min(W, H) * 0.26;
+      var R = Math.min(W, H) * 0.24;
       for (var j = 1; j < N - 1; j++){
         var q = pts[j];
         var dx = pointer.x - q.x, dy = pointer.y - q.y;
         var d = Math.sqrt(dx * dx + dy * dy);
         if (d < R && d > 0.001){
-          var k = (1 - d / R); k = k * k * 0.34;
+          var k = (1 - d / R); k = k * k * 0.3;
           q.x += dx * k; q.y += dy * k;
         }
       }
@@ -247,10 +208,13 @@
 
     for (var it = 0; it < 18; it++){
       for (var s = 0; s < N - 1; s++){
+        // the severed link only pulls once weld starts climbing
+        var strength = (s === MID) ? state.weld : 1;
+        if (strength <= 0.001) continue;
         var a = pts[s], b = pts[s + 1];
         var ddx = b.x - a.x, ddy = b.y - a.y;
         var dist = Math.sqrt(ddx * ddx + ddy * ddy) || 0.0001;
-        var diff = (dist - restSpacing) / dist * 0.5;
+        var diff = (dist - restSpacing) / dist * 0.5 * strength;
         var ox = ddx * diff, oy = ddy * diff;
         if (s !== 0){ a.x += ox; a.y += oy; }
         if (s !== N - 2){ b.x -= ox; b.y -= oy; }
@@ -269,15 +233,6 @@
   function draw(){
     ctx.clearRect(0, 0, W, H);
 
-    var maxDef = 0;
-    for (var i = 0; i < N; i++){
-      var d = Math.abs(pts[i].y - cy);
-      if (d > maxDef) maxDef = d;
-    }
-    var norm = Math.min(maxDef / (H * 0.26), 1);
-    state.strain += (norm - state.strain) * 0.12;
-
-    // anchor brackets
     ctx.strokeStyle = "rgba(111,126,150,.5)";
     ctx.lineWidth = 1;
     [ax0, ax1].forEach(function(x){
@@ -288,13 +243,18 @@
       ctx.stroke();
     });
 
+    // the line the strand should be sitting on, still there, still empty
+    ctx.save();
+    ctx.setLineDash([2, 7]);
+    ctx.strokeStyle = "rgba(111,126,150,.18)";
+    ctx.beginPath(); ctx.moveTo(ax0, cy); ctx.lineTo(ax1, cy); ctx.stroke();
+    ctx.restore();
+
     var fibres = [-1.6, 0, 1.6];
     ctx.lineCap = "round";
 
-    // bloom pass: heat where the strand is worked hardest
-    var glow = state.strain * 0.5 + state.bloom;
-    if (glow > 0.02){
-      ctx.globalAlpha = Math.min(glow * 0.22, 0.4);
+    if (state.bloom > 0.02){
+      ctx.globalAlpha = Math.min(state.bloom * 0.3, 0.45);
       ctx.strokeStyle = "rgb(232,163,61)";
       ctx.lineWidth = 9;
       ctx.beginPath();
@@ -308,9 +268,10 @@
       var off = fibres[f];
       var alpha = f === 1 ? 1 : 0.45;
       for (var s = 0; s < N - 1; s++){
+        if (s === MID && state.weld < 0.35) continue; // the visible gap
         var a = pts[s], b = pts[s + 1];
         var local = Math.min(Math.abs(a.y - cy) / (H * 0.2), 1);
-        var heat = Math.min(local + state.bloom, 1);
+        var heat = Math.min(local * 0.5 + state.bloom, 1);
         var col = heat < 0.6
           ? mix(C.steel, C.stress, heat / 0.6)
           : mix(C.stress, C.hot, (heat - 0.6) / 0.4);
@@ -323,20 +284,19 @@
         ctx.stroke();
       }
     }
+
+    // frayed ends: a dot on each side of the break
+    if (state.weld < 0.35){
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = "rgb(232,163,61)";
+      [pts[MID], pts[MID + 1]].forEach(function(p){
+        ctx.beginPath(); ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2); ctx.fill();
+      });
+    }
     ctx.globalAlpha = 1;
   }
 
-  var frame = 0;
-  function loop(t){
-    step(t);
-    draw();
-    if ((frame++ % 3) === 0){
-      var v = state.strain * 99.4;
-      strainEl.textContent = (v < 10 ? "0" : "") + v.toFixed(1) + "%";
-      barEl.style.width = (state.strain * 100).toFixed(1) + "%";
-    }
-    requestAnimationFrame(loop);
-  }
+  function loop(t){ step(t); draw(); requestAnimationFrame(loop); }
 
   function onMove(e){
     var p = e.touches ? e.touches[0] : e;
@@ -350,22 +310,34 @@
 
   lay(); build(); requestAnimationFrame(loop);
 
-  // page-load choreography: the strand is strung before the words land
   if (!reduced && window.gsap){
     gsap.set(".line", { yPercent: 112 });
     gsap.set(["#eyebrow", "#lede", "#foot"], { opacity: 0, y: 14 });
-    gsap.set("#ledger .row", { opacity: 0, y: 10 });
-
-    var tl = gsap.timeline({ defaults:{ ease:"power3.out" } });
-    tl.to(state, { tautness: 1, duration: 1.5, ease: "power2.inOut" })
-      .to(state, { bloom: 0.5, duration: 0.18, ease: "power1.in" }, "-=0.22")
-      .to(state, { bloom: 0, duration: 1.1, ease: "power2.out" })
-      .to("#eyebrow", { opacity: 1, y: 0, duration: 0.7 }, "-=1.5")
-      .to(".line", { yPercent: 0, duration: 1, stagger: 0.09 }, "-=1.35")
-      .to("#lede", { opacity: 1, y: 0, duration: 0.8 }, "-=0.65")
-      .to("#ledger .row", { opacity: 1, y: 0, duration: 0.6, stagger: 0.07 }, "-=0.5")
-      .to("#foot", { opacity: 1, y: 0, duration: 0.7 }, "-=0.4");
+    gsap.timeline({ defaults:{ ease:"power3.out" } })
+      .to("#eyebrow", { opacity: 1, y: 0, duration: 0.6 }, 0.25)
+      .to(".line", { yPercent: 0, duration: 0.95, stagger: 0.09 }, 0.35)
+      .to("#lede", { opacity: 1, y: 0, duration: 0.8 }, "-=0.5")
+      .to("#foot", { opacity: 1, y: 0, duration: 0.7 }, "-=0.45");
   }
+
+  var going = false;
+  btn.addEventListener("click", function(){
+    if (going) return;
+    going = true;
+    btn.setAttribute("disabled", "");
+    ctaLabel.textContent = "Splicing";
+    statusEl.innerHTML = "Tension <b>returning</b>";
+
+    if (reduced || !window.gsap){ window.location.href = "/"; return; }
+
+    gsap.timeline({ onComplete: function(){ window.location.href = "/"; } })
+      .to(state, { weld: 1, duration: 0.9, ease: "power2.in" })
+      .to(state, { gravity: 0.03, sway: 0, duration: 0.7, ease: "power2.out" }, "-=0.5")
+      .to(state, { bloom: 0.85, duration: 0.16, ease: "power1.in" }, "-=0.25")
+      .add(function(){ statusEl.innerHTML = "Tension <b>held</b>"; })
+      .to(state, { bloom: 0, duration: 0.9, ease: "power2.out" })
+      .to(".shell", { opacity: 0, y: -12, duration: 0.5, ease: "power2.in" }, "-=0.35");
+  });
 })();
 </script>
 </body>
